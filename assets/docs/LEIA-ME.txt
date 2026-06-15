@@ -1,0 +1,15 @@
+Pasta de documentos do portfólio.
+
+Currículo em português:
+assets/docs/Theo_Fischer_Curriculo.pdf
+
+Currículo em inglês:
+assets/docs/Theo_Fischer_Resume_EN.pdf
+
+O site escolhe automaticamente o arquivo conforme o idioma:
+- Português: Currículo (PT)
+- Inglês: Resume (EN)
+- Espanhol: CV en inglés
+
+Os dois PDFs possuem links clicáveis para e-mail, LinkedIn e GitHub.
+Para atualizar uma versão, substitua o PDF correspondente mantendo o mesmo nome.

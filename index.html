@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d13">
+  <meta name="author" content="Theo de Campos Fischer">
+  <meta name="robots" content="index, follow">
+  <meta
+    name="description"
+    content="Portfólio de Theo de Campos Fischer, Técnico em Informática com projetos em JavaScript, Node.js, SQL e Python."
+    data-i18n-content="meta.description"
+  >
+
+  <link rel="canonical" href="https://theocfischer.github.io/portfolio-theo-fischer/">
+  <link rel="alternate" hreflang="pt-BR" href="https://theocfischer.github.io/portfolio-theo-fischer/?lang=pt">
+  <link rel="alternate" hreflang="en" href="https://theocfischer.github.io/portfolio-theo-fischer/?lang=en">
+  <link rel="alternate" hreflang="es" href="https://theocfischer.github.io/portfolio-theo-fischer/?lang=es">
+  <link rel="alternate" hreflang="x-default" href="https://theocfischer.github.io/portfolio-theo-fischer/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Portfólio de Theo Fischer">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Theo de Campos Fischer | Portfólio">
+  <meta property="og:description" content="Projetos com JavaScript, Node.js, SQL, Python e dados.">
+  <meta property="og:url" content="https://theocfischer.github.io/portfolio-theo-fischer/">
+  <meta property="og:image" content="https://theocfischer.github.io/portfolio-theo-fischer/assets/images/social-preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Theo Fischer - JavaScript, Node.js, SQL e Python">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Theo de Campos Fischer | Portfólio">
+  <meta name="twitter:description" content="Projetos com JavaScript, Node.js, SQL, Python e dados.">
+  <meta name="twitter:image" content="https://theocfischer.github.io/portfolio-theo-fischer/assets/images/social-preview.jpg">
+  <meta name="twitter:image:alt" content="Theo Fischer - JavaScript, Node.js, SQL e Python">
+
+  <title>Theo de Campos Fischer | Portfólio</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/images/profile/theo-fischer.webp" as="image" type="image/webp" fetchpriority="high">
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Theo de Campos Fischer",
+      "url": "https://theocfischer.github.io/portfolio-theo-fischer/",
+      "image": "https://theocfischer.github.io/portfolio-theo-fischer/assets/images/profile/theo-fischer.jpg",
+      "jobTitle": "Técnico em Informática",
+      "email": "theocfischer@gmail.com",
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Porto Alegre, RS, Brasil"
+      },
+      "sameAs": [
+        "https://github.com/theocfischer",
+        "https://www.linkedin.com/in/theo-fischer-8094682b7/"
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo" data-i18n="accessibility.skipContent">Pular para o conteúdo</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="container header-content">
+      <a
+        class="brand"
+        href="#inicio"
+        aria-label="Voltar ao início"
+        data-i18n-aria-label="accessibility.backHome"
+      >
+        <span class="brand-mark" aria-hidden="true">TF</span>
+        <span class="brand-copy">
+          <strong>Theo Fischer</strong>
+          <small data-i18n="header.role">Web · Dados · Sistemas</small>
+        </span>
+      </a>
+
+      <nav
+        class="site-nav"
+        id="site-nav"
+        aria-label="Navegação principal"
+        data-nav
+        data-i18n-aria-label="accessibility.mainNavigation"
+      >
+        <a href="#sobre" data-nav-link data-i18n="nav.about">Sobre</a>
+        <a href="#projetos" data-nav-link data-i18n="nav.projects">Projetos</a>
+        <a href="#habilidades" data-nav-link data-i18n="nav.skills">Habilidades</a>
+        <a href="#trajetoria" data-nav-link data-i18n="nav.journey">Trajetória</a>
+        <a href="#contato" data-nav-link data-i18n="nav.contact">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-picker" data-language-picker>
+          <button
+            class="language-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            aria-controls="language-menu"
+            aria-label="Selecionar idioma"
+            data-language-trigger
+            data-i18n-aria-label="language.select"
+          >
+            <img src="assets/icons/flags/br.svg" alt="" data-current-language-flag>
+            <span data-current-language-code>PT</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"></path></svg>
+          </button>
+
+          <div
+            class="language-menu"
+            id="language-menu"
+            role="menu"
+            aria-label="Idioma do portfólio"
+            data-i18n-aria-label="language.menuLabel"
+            data-language-menu
+            hidden
+          >
+            <button id="language-pt" type="button" role="menuitemradio" aria-checked="true" tabindex="-1" data-language="pt">
+              <img src="assets/icons/flags/br.svg" alt=""><span>Português</span><small>PT</small>
+            </button>
+            <button id="language-en" type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-language="en">
+              <img src="assets/icons/flags/us.svg" alt=""><span>English</span><small>EN</small>
+            </button>
+            <button id="language-es" type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-language="es">
+              <img src="assets/icons/flags/es.svg" alt=""><span>Español</span><small>ES</small>
+            </button>
+          </div>
+        </div>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Alternar para tema claro"
+          data-theme-toggle
+          data-i18n-aria-label="theme.toLight"
+        >
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 14.4A8.5 8.5 0 0 1 9.6 3.5 8.5 8.5 0 1 0 20.5 14.4Z"></path>
+          </svg>
+        </button>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          data-i18n-aria-label="menu.open"
+          data-menu-toggle
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <canvas class="orbital-system" data-orbital-canvas aria-hidden="true"></canvas>
+
+    <section class="hero section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="availability-line">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.availability">Buscando vaga júnior em web, dados e sistemas</span>
+          </div>
+
+          <p class="eyebrow" data-i18n="hero.eyebrow">Técnico em Informática · Porto Alegre/RS</p>
+          <h1>Theo de Campos Fischer</h1>
+          <p class="hero-title" data-i18n="hero.title">Interfaces, dados e sistemas simples com JavaScript, Node.js, SQL e Python.</p>
+          <p class="hero-description" data-i18n="hero.description">
+            Técnico em Informática pelo IFRS. Usei Python e Jupyter no estágio da FURG para tratar dados ambientais e venho publicando projetos web com login, CRUD, sessões, APIs e banco.
+          </p>
+
+          <div
+            class="hero-actions"
+            role="group"
+            aria-label="Links principais"
+            data-i18n-aria-label="accessibility.primaryLinks"
+          >
+            <a
+              class="btn btn-primary"
+              href="assets/docs/Theo_Fischer_Curriculo.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-resume-link
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+                <path d="M14 2v6h6M8 13h8M8 17h6"></path>
+              </svg>
+              <span data-i18n="actions.resume">Currículo (PT)</span>
+            </a>
+
+            <a class="btn btn-secondary" href="https://github.com/theocfischer" target="_blank" rel="noopener noreferrer">
+              <img class="service-icon" src="assets/icons/github.svg" alt="">
+              GitHub
+            </a>
+
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/theo-fischer-8094682b7/" target="_blank" rel="noopener noreferrer">
+              <img class="service-icon" src="assets/icons/linkedin.svg" alt="">
+              LinkedIn
+            </a>
+
+            <a class="btn btn-secondary" href="mailto:theocfischer@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+              <span data-i18n="actions.email">E-mail</span>
+            </a>
+          </div>
+
+          <div
+            class="hero-proof"
+            role="list"
+            aria-label="Resumo rápido"
+            data-i18n-aria-label="accessibility.quickSummary"
+          >
+            <div role="listitem"><strong>04</strong><span data-i18n="hero.proofProjects">projetos selecionados</span></div>
+            <div role="listitem"><strong>C2</strong><span data-i18n="hero.proofEnglish">inglês certificado</span></div>
+            <div role="listitem"><strong>FURG</strong><span data-i18n="hero.proofFurg">dados reais no estágio</span></div>
+            <div role="listitem"><strong>Node + SQL</strong><span data-i18n="hero.proofNode">login, CRUD e sessões</span></div>
+            <div role="listitem"><strong>IFRS</strong><span data-i18n="hero.proofIfrs">técnico formado em 2025</span></div>
+          </div>
+        </div>
+
+        <aside
+          class="hero-visual reveal"
+          aria-label="Resumo do perfil"
+          data-i18n-aria-label="accessibility.profileSummary"
+        >
+          <div class="profile-shell" data-tilt-card>
+            <div class="profile-identity">
+              <div class="profile-photo-wrap">
+                <picture>
+                  <source srcset="assets/images/profile/theo-fischer.webp" type="image/webp">
+                  <img
+                    class="profile-photo"
+                    src="assets/images/profile/theo-fischer.jpg"
+                    width="720"
+                    height="720"
+                    alt="Foto de Theo de Campos Fischer"
+                    fetchpriority="high"
+                    decoding="async"
+                    data-i18n-alt="profile.photoAlt"
+                  >
+                </picture>
+              </div>
+
+              <div class="profile-copy">
+                <p class="profile-name">Theo Fischer</p>
+                <p class="profile-role" data-i18n="profile.role">Técnico em Informática</p>
+                <div class="profile-focus">
+                  <span data-i18n="profile.focusLabel">Estudando agora</span>
+                  <strong data-i18n="profile.focusValue">TypeScript e React</strong>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="profile-stack"
+              role="group"
+              aria-label="Base técnica"
+              data-i18n-aria-label="profile.stackLabel"
+            >
+              <p class="profile-stack-heading" data-i18n="profile.stackLabel">Base técnica</p>
+              <div class="profile-stack-items">
+                <span data-i18n="profile.stackFront">Front-end · JavaScript</span>
+                <span data-i18n="profile.stackBackend">Back-end · Node.js</span>
+                <span data-i18n="profile.stackData">Dados · Python</span>
+                <span data-i18n="profile.stackDatabase">Banco de dados · SQL</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section about-section" id="sobre">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">IFRS · FURG · GitHub ativo</p>
+          <h2 data-i18n="about.title">Técnico pelo IFRS, estágio com dados na FURG e projetos publicados no GitHub.</h2>
+        </div>
+
+        <div class="about-story reveal">
+          <div class="story-copy">
+            <p data-i18n="about.paragraphOne">
+              No estágio na FURG, tratei bases públicas da Lagoa dos Patos com Python e Jupyter. O resultado virou gráficos e um pôster apresentado na Mostra Científica do IFRS.
+            </p>
+            <p data-i18n="about.paragraphTwo">
+              Nos projetos web, foquei em coisas que aparecem no dia a dia: login, sessões, CRUD, APIs, banco de dados e validação de regras. Agora estou reforçando TypeScript e React.
+            </p>
+          </div>
+
+          <dl class="about-facts">
+            <div><dt data-i18n="about.factOneLabel">Formação</dt><dd data-i18n="about.factOneValue">Técnico em Informática para Internet pelo IFRS</dd></div>
+            <div><dt data-i18n="about.factTwoLabel">Localização</dt><dd data-i18n="about.factTwoValue">Porto Alegre/RS · remoto Brasil</dd></div>
+            <div><dt data-i18n="about.factThreeLabel">Objetivo</dt><dd data-i18n="about.factThreeValue">Vaga júnior em tecnologia</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projetos">
+      <div class="container">
+        <div class="section-heading section-heading-row reveal">
+          <div>
+            <p class="eyebrow" data-i18n="projects.eyebrow">Projetos selecionados</p>
+            <h2 data-i18n="projects.title">Projetos que já coloquei para rodar.</h2>
+          </div>
+          <p data-i18n="projects.intro">Uma amostra do que já pratiquei: dados com Python, sistemas web, SQL e protótipos documentados.</p>
+        </div>
+
+        <div class="projects-board" data-projects-list aria-live="polite">
+          <noscript>
+            <p class="noscript-message">Ative o JavaScript para ver os cards interativos ou acesse meus repositórios pelo GitHub.</p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="habilidades">
+      <div class="container skills-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="skills.eyebrow">Habilidades</p>
+          <h2 data-i18n="skills.title">Habilidades com contexto, não só lista.</h2>
+          <p data-i18n="skills.intro">Separei as ferramentas pelo contexto em que usei. TypeScript e React seguem como estudo atual.</p>
+        </div>
+
+        <div class="skills-explorer reveal">
+          <div
+            class="skills-tabs"
+            role="tablist"
+            aria-label="Categorias de habilidades"
+            data-i18n-aria-label="skills.tabsLabel"
+          >
+            <button id="skill-tab-web" type="button" role="tab" aria-selected="true" aria-controls="skill-panel" data-skill-tab="web" data-i18n="skills.tabWeb">Web &amp; Sistemas</button>
+            <button id="skill-tab-data" type="button" role="tab" aria-selected="false" aria-controls="skill-panel" tabindex="-1" data-skill-tab="data" data-i18n="skills.tabData">Dados &amp; Automação</button>
+            <button id="skill-tab-database" type="button" role="tab" aria-selected="false" aria-controls="skill-panel" tabindex="-1" data-skill-tab="database" data-i18n="skills.tabDatabase">Banco &amp; Ferramentas</button>
+            <button id="skill-tab-support" type="button" role="tab" aria-selected="false" aria-controls="skill-panel" tabindex="-1" data-skill-tab="support" data-i18n="skills.tabSupport">Suporte &amp; Infra</button>
+          </div>
+
+          <div
+            class="skill-panel"
+            id="skill-panel"
+            role="tabpanel"
+            tabindex="0"
+            aria-labelledby="skill-tab-web"
+            data-skill-panel
+          >
+            <noscript>
+              <p class="noscript-message">Ative o JavaScript para navegar pelas categorias. A lista principal continua no currículo.</p>
+            </noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey-section" id="trajetoria">
+      <div class="container journey-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="journey.eyebrow">Trajetória</p>
+          <h2 data-i18n="journey.title">Formação, estágio e estudos recentes.</h2>
+          <p data-i18n="journey.intro">O caminho até aqui: IFRS, dados ambientais na FURG e projetos web para praticar Node, SQL, Python e organização de código.</p>
+        </div>
+
+        <div class="timeline reveal">
+          <article class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <time>2022 a 2025</time>
+            <div>
+              <h3 data-i18n="journey.itemOneTitle">Técnico em Informática para Internet · IFRS</h3>
+              <p data-i18n="journey.itemOneText">Base em HTML, CSS, JavaScript, banco de dados, redes, manutenção e projetos integradores.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <time>2025</time>
+            <div>
+              <h3 data-i18n="journey.itemTwoTitle">Estágio em análise de dados ambientais · FURG</h3>
+              <p data-i18n="journey.itemTwoText">Tratamento de bases públicas da Lagoa dos Patos, geração de gráficos e organização dos resultados em notebook e pôster.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <time data-i18n="journey.currentPeriod">2025 até hoje</time>
+            <div>
+              <h3 data-i18n="journey.itemThreeTitle">Cursos e projetos independentes</h3>
+              <p data-i18n="journey.itemThreeText">Cursos recentes em IA, dados, hardware e Excel, junto com prática contínua em projetos no GitHub.</p>
+            </div>
+          </article>
+        </div>
+
+        <ul
+          class="certification-strip reveal"
+          aria-label="Certificações e cursos"
+          data-i18n-aria-label="journey.certificationsLabel"
+        >
+          <li data-i18n="journey.certificationOne">EF SET · Inglês C2</li>
+          <li data-i18n="journey.certificationTwo">Alura · IA &amp; Dados</li>
+          <li data-i18n="journey.certificationThree">DIO · GenAI, Dados &amp; Cibersegurança</li>
+          <li data-i18n="journey.certificationFour">Cisco · Hardware</li>
+          <li data-i18n="journey.certificationFive">Fundação Bradesco · Excel</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contato</p>
+            <h2 data-i18n="contact.title">Me chama no e-mail ou no LinkedIn.</h2>
+            <div class="contact-availability" aria-label="Status profissional" data-i18n-aria-label="contact.statusLabel">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-i18n="contact.availability">Open to work · tecnologia júnior</span>
+            </div>
+            <p data-i18n="contact.text">Técnico recém-formado pelo IFRS, com estágio em dados e projetos web publicados. Aberto a vagas júnior e conversas técnicas por e-mail ou LinkedIn.</p>
+          </div>
+
+          <div class="contact-side">
+            <a class="email-link" href="mailto:theocfischer@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">
+              <span data-i18n="contact.emailLabel">Meu e-mail</span>
+              <strong>theocfischer@gmail.com</strong>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+            </a>
+
+            <div class="contact-actions">
+              <button class="btn btn-secondary" type="button" data-copy-email="theocfischer@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span data-i18n="actions.copyEmail">Copiar e-mail</span>
+              </button>
+
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/theo-fischer-8094682b7/" target="_blank" rel="noopener noreferrer">
+                <img class="service-icon" src="assets/icons/linkedin.svg" alt="">LinkedIn
+              </a>
+            </div>
+
+            <p class="copy-feedback" role="status" aria-live="polite" data-copy-feedback></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span data-current-year></span> Theo de Campos Fischer. <span data-i18n="footer.text">Construído do zero, sem frameworks.</span></p>
+      <a href="#inicio" data-i18n="footer.backTop">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <button
+    class="back-to-top"
+    type="button"
+    aria-label="Voltar ao topo"
+    data-back-to-top
+    data-i18n-aria-label="footer.backTopLabel"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6"></path></svg>
+  </button>
+
+  <div
+    class="image-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-describedby="lightbox-caption"
+    aria-label="Visualização ampliada do projeto"
+    data-image-lightbox
+    data-i18n-aria-label="projects.lightboxLabel"
+    hidden
+  >
+    <div
+      class="lightbox-backdrop"
+      data-lightbox-close
+      aria-hidden="true"
+    ></div>
+
+    <div class="lightbox-dialog">
+      <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Fechar imagem"
+        data-lightbox-close
+        data-i18n-aria-label="projects.closeImage"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+      </button>
+      <img alt="" data-lightbox-image>
+      <p id="lightbox-caption" data-lightbox-caption></p>
+    </div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

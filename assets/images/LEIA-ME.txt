@@ -1,0 +1,4 @@
+Pasta de imagens do portfólio.
+
+profile/  -> foto de perfil usada no topo do site (.webp principal + .jpg fallback).
+projects/ -> miniaturas dos projetos, apontadas no arquivo js/projects.js.
