@@ -123,6 +123,58 @@
         }
       }
     },
+      {
+    id: 'guia-minecraft-remastered',
+    highlight: false,
+    image: 'assets/images/projects/guia-minecraft-remastered.webp',
+    imageWidth: 1600,
+    imageHeight: 1000,
+    github: 'https://github.com/theocfischer/guia-minecraft-remastered',
+    demo: 'https://theocfischer.github.io/guia-minecraft-remastered/',
+    technologies: {
+      pt: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'UI interativa', 'Projeto estático'],
+      en: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'Interactive UI', 'Static project'],
+      es: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'UI interactiva', 'Proyecto estático']
+    },
+    content: {
+      pt: {
+        title: 'Guia Minecraft Remastered',
+        subtitle: 'Projeto pessoal · Front-end',
+        status: 'Concluído',
+        description: 'Remasterização de um projeto antigo em HTML, CSS e JavaScript. Reorganizei o conteúdo em páginas temáticas, cards, filtros, modais e uma curadoria local de assets.',
+        details: [
+          'Inventário, criaturas, exploração, construção e extras em páginas próprias',
+          'Modais interativos com variações, detalhes e imagens locais',
+          'Refatoração do JavaScript em arquivos separados para dados, utilitários e renderização'
+        ],
+        imageAlt: 'Tela do Guia Minecraft Remastered com cards visuais e navegação temática'
+      },
+      en: {
+        title: 'Minecraft Guide Remastered',
+        subtitle: 'Personal project · Front-end',
+        status: 'Completed',
+        description: 'A remaster of an older HTML, CSS and JavaScript project. I reorganized the content into themed pages, cards, filters, modals and a local asset collection.',
+        details: [
+          'Inventory, mobs, exploration, building and extras in dedicated pages',
+          'Interactive modals with variations, details and local images',
+          'JavaScript refactored into separate files for data, utilities and rendering'
+        ],
+        imageAlt: 'Minecraft Guide Remastered screen with visual cards and themed navigation'
+      },
+      es: {
+        title: 'Guía Minecraft Remastered',
+        subtitle: 'Proyecto personal · Front-end',
+        status: 'Finalizado',
+        description: 'Remasterización de un proyecto antiguo en HTML, CSS y JavaScript. Reorganicé el contenido en páginas temáticas, cards, filtros, modales y una curaduría local de assets.',
+        details: [
+          'Inventario, criaturas, exploración, construcción y extras en páginas propias',
+          'Modales interactivos con variaciones, detalles e imágenes locales',
+          'JavaScript refactorizado en archivos separados para datos, utilidades y renderizado'
+        ],
+        imageAlt: 'Pantalla de la Guía Minecraft Remastered con cards visuales y navegación temática'
+      }
+    }
+  },
     {
       id: 'assistente-financeiro',
       highlight: false,
