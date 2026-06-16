@@ -50,7 +50,8 @@
       image: 'assets/images/projects/radar-candidaturas.webp',
       imageWidth: 1600,
       imageHeight: 1000,
-      github: '',
+      github: 'https://github.com/theocfischer/radar-de-candidaturas',
+      demo: 'https://radar-de-candidaturas-demo.vercel.app/',
       technologies: {
         pt: ['JavaScript', 'Node.js', 'Express', 'SQL', 'API REST', 'Dashboard'],
         en: ['JavaScript', 'Node.js', 'Express', 'SQL', 'REST API', 'Dashboard'],
@@ -60,7 +61,7 @@
         pt: {
           title: 'Radar de Candidaturas',
           subtitle: 'Projeto pessoal · Full stack',
-          status: 'Em desenvolvimento',
+          status: 'Concluido',
           description: 'Comecei esse projeto porque minha busca por vaga virou coisa demais para controlar no bloco de notas. A ideia é reunir empresas, vagas, etapas, filtros e indicadores em uma tela própria.',
           details: ['Cadastro de empresas, vagas e etapas do processo', 'Filtros e indicadores para acompanhar a busca', 'Repositório em organização antes da publicação'],
           imageAlt: 'Tela do Radar de Candidaturas com indicadores, filtros e lista de vagas'
@@ -68,7 +69,7 @@
         en: {
           title: 'Application Tracker',
           subtitle: 'Personal project · Full stack',
-          status: 'In development',
+          status: 'Completed',
           description: 'I started this project because my own job search became too much to track in notes. The idea is to bring companies, jobs, stages, filters and indicators into one screen.',
           details: ['Company, job and hiring-stage records', 'Filters and indicators to track the search', 'Repository being organized before publication'],
           imageAlt: 'Application Tracker screen with indicators, filters and a job list'
@@ -76,7 +77,7 @@
         es: {
           title: 'Radar de Candidaturas',
           subtitle: 'Proyecto personal · Full stack',
-          status: 'En desarrollo',
+          status: 'Finalizado',
           description: 'Empecé este proyecto porque mi propia búsqueda de empleo se volvió demasiado grande para controlarla en notas. La idea es reunir empresas, vacantes, etapas, filtros e indicadores en una pantalla.',
           details: ['Registro de empresas, vacantes y etapas del proceso', 'Filtros e indicadores para seguir la búsqueda', 'Repositorio en organización antes de la publicación'],
           imageAlt: 'Pantalla del Radar de Candidaturas con indicadores, filtros y lista de vacantes'
@@ -190,6 +191,7 @@
     const content = getProjectContent(project);
     const highlighted = Boolean(project.highlight);
     const hasRepository = Boolean(project.github);
+    const hasDemo = Boolean(project.demo);
     const statusClass = /desenvolvimento|development|desarrollo/i.test(content.status) ? ' badge-progress' : '';
     const cardClasses = [
       'project-card',
@@ -198,11 +200,15 @@
       'reveal'
     ].filter(Boolean).join(' ');
 
+    const demoAction = hasDemo
+      ? `<a class="btn btn-primary" href="${escapeHTML(project.demo)}" target="_blank" rel="noopener noreferrer">${escapeHTML(i18n?.t('actions.demo', 'Ver demo') || 'Ver demo')}</a>`
+      : '';
+
     const repositoryAction = hasRepository
       ? `<a class="btn btn-secondary" href="${escapeHTML(project.github)}" target="_blank" rel="noopener noreferrer">${escapeHTML(i18n?.t('actions.github', 'Ver código') || 'Ver código')}</a>`
       : `<span class="btn btn-disabled" aria-disabled="true">${escapeHTML(i18n?.t('actions.repositoryPlanned', 'Repositório em organização') || 'Repositório em organização')}</span>`;
 
-    const projectActions = `<div class="project-actions">${repositoryAction}</div>`;
+    const projectActions = `<div class="project-actions">${demoAction}${repositoryAction}</div>`;
 
     const expandLabel = `${i18n?.t('projects.expandImage', 'Ampliar imagem') || 'Ampliar imagem'}: ${content.title}`;
 

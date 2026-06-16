@@ -45,6 +45,7 @@
       actions: {
         resume: 'Currículo (PT)',
         github: 'Ver código',
+        demo: 'Ver demo',
         copyEmail: 'Copiar e-mail',
         email: 'E-mail',
         repositoryPlanned: 'Repositório em organização'
@@ -187,6 +188,7 @@
       actions: {
         resume: 'Resume (EN)',
         github: 'View code',
+        demo: 'Live demo',
         copyEmail: 'Copy e-mail',
         email: 'E-mail',
         repositoryPlanned: 'Repository being organized'
@@ -329,6 +331,7 @@
       actions: {
         resume: 'CV en inglés',
         github: 'Ver código',
+        demo: 'Ver demo',
         copyEmail: 'Copiar e-mail',
         email: 'E-mail',
         repositoryPlanned: 'Repositorio en organización'
