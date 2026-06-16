@@ -126,7 +126,7 @@
       {
     id: 'guia-minecraft-remastered',
     highlight: false,
-    image: 'assets/images/projects/guia-minecraft-remastered.webp',
+    image: 'assets/images/projects/guia-minecraft-remastered.png',
     imageWidth: 1600,
     imageHeight: 1000,
     github: 'https://github.com/theocfischer/guia-minecraft-remastered',
